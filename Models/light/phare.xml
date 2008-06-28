@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>phare.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+
+    <!-- Objets transparents -->
+    <object-name>phare</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>phare</object-name>
+  </animation>
+
+  <animation>
+   <type>select</type>
+   <object-name>phare</object-name>
+   <condition>
+    <greater-than>
+     <property>/controls/lighting/land-light-norm</property>
+     <value>0.5</value>
+    </greater-than>
+   </condition>
+  </animation>
+
+  <animation>
+    <type>flash</type>
+    <object-name>phare</object-name>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <power>2</power>
+    <factor>2</factor>
+    <offset>0</offset>
+    <two-sides type="bool">false</two-sides>
+    <min>0.5</min>
+    <max>2</max>
+  </animation>
+
+</PropertyList>

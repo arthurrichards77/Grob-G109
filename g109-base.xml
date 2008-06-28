@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D,FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <flaps>
+      <setting>0.00</setting>
+      <setting>0.25</setting>
+      <setting>0.75</setting>
+      <setting>1.00</setting>
+    </flaps>
+
+    <startup>
+      <splash-texture>Aircraft/Grob-G109/g109-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Grob-G109/Sounds/g109-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Grob-G109/Models/g109.xml</path>
+    </model>
+
+    <panel>
+      <visibility archive="y">false</visibility>
+    </panel>
+
+    <help>
+      <title>Grob G109</title>
+    </help>
+
+    <systems>
+      <electrical>
+      <path></path>
+      </electrical>
+    </systems>
+                            
+                                                       
+  </sim>
+ 
+  <input>
+    <keyboard include="Nasal/g109-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/Grob-G109/Nasal/doors.nas</file>
+    </doors>
+    <g109>
+      <file>Aircraft/Grob-G109/Nasal/light.nas</file>
+      <file>Aircraft/Grob-G109/Nasal/g109-electrical.nas</file>
+      <file>Aircraft/Grob-G109/Nasal/instruments.nas</file>
+      <file>Aircraft/Grob-G109/Nasal/g109.nas</file>
+      <file>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Transponder/Transponder.nas</file>
+    </g109>
+  </nasal>
+  
+</PropertyList>
