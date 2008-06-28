@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>Pedals.ac</path>
+
+        <animation>
+                <type>rotate</type>
+                <object-name>PedalLeft</object-name>
+                <object-name>BrakeLeft</object-name>
+                <property>controls/flight/rudder</property>
+                <!--min-deg>0</min-deg-->
+                <!--max-deg>360</max-deg-->
+                <factor>15</factor>
+                <center>
+                        <x-m>0</x-m>
+                        <y-m>0</y-m>
+                        <z-m>-0.01</z-m>
+                </center>
+                <axis>   
+                        <x>0</x>
+                        <y>1</y>
+                        <z>0</z>
+                </axis>
+        </animation>   
+
+        <animation>
+                <type>rotate</type>
+                <object-name>PedalRight</object-name>
+                <object-name>BrakeRight</object-name>
+                <property>controls/flight/rudder</property>
+                <!--min-deg>0</min-deg-->
+                <!--max-deg>360</max-deg-->
+                <factor>15</factor>
+                <center>
+                        <x-m>0</x-m>
+                        <y-m>0</y-m>
+                        <z-m>-0.01</z-m>
+                </center>
+                <axis>   
+                        <x>0</x>
+                        <y>-1</y>
+                        <z>0</z>
+                </axis>
+        </animation>   
+
+</PropertyList>
