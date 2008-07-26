@@ -4,7 +4,7 @@
 
   <sim include="Nasal/views.xml">
 
-    <author>BARANGER Emmanuel (3D,FDM)</author>
+    <author>Emmanuel BARANGER (3D,FDM), Jon STOCKIL (Panel, FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -27,11 +27,26 @@
 
     <model>
       <path archive="y">Aircraft/Grob-G109/Models/g109.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
     </model>
 
     <panel>
       <visibility archive="y">false</visibility>
     </panel>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
 
     <help>
       <title>Grob G109</title>
@@ -42,8 +57,9 @@
       <path></path>
       </electrical>
     </systems>
-                            
-                                                       
+
+    <menubar include="Dialogs/g109-menu.xml"/>
+
   </sim>
  
   <input>
@@ -60,6 +76,8 @@
       <file>Aircraft/Grob-G109/Nasal/instruments.nas</file>
       <file>Aircraft/Grob-G109/Nasal/g109.nas</file>
       <file>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Transponder/Transponder.nas</file>
+      <file>Aircraft/Grob-G109/Nasal/liveries.nas</file>
+      <file>Aircraft/Grob-G109/Nasal/immat.nas</file>
     </g109>
   </nasal>
   

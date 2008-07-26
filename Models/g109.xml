@@ -4,6 +4,15 @@
 
   <path>g109.ac</path>
 
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Grob-G109/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
@@ -30,6 +39,7 @@
     <object-name>antenne</object-name>
     <object-name>axeA</object-name>
     <object-name>axeB</object-name>
+    <object-name>echappe</object-name>
 
     <!-- Objets transparents -->
     <object-name>verre</object-name>
@@ -51,6 +61,49 @@
     <object-name>propdisc</object-name>
     <object-name>propblur</object-name>
   </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>ailes</object-name>
+    <object-name>derive</object-name>
+    <object-name>direction</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>roueA</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>bol</object-name>
+    <object-name>helice</object-name>
+    <object-name>pilote</object-name>
+    <object-name>passager</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>spoilerG</object-name>
+    <object-name>spoilerD</object-name>
+    <object-name>caches</object-name>
+    <object-name>tourporteG</object-name>
+    <object-name>tourporteG</object-name>
+    <object-name>phare</object-name>
+    <object-name>basbeacon</object-name>
+    <object-name>antenne</object-name>
+    <object-name>axeA</object-name>
+    <object-name>axeB</object-name>
+    <object-name>echappe</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+  </animation>
+
+  <!-- Immatriculation -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Immat/immat.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+    </offsets>
+  </model>
 
   <!-- Intérieur -->
   <model>
