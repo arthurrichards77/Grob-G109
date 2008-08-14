@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<!-- <PropertyList include="g109-jsbsim-set.xml"> -->
-<PropertyList include="g109-yasim-set.xml">
+<!-- <PropertyList include="g109-jsbsim-cnf.xml"> -->
+<PropertyList include="g109-yasim-cnf.xml">
 
   <sim>
     <description>Grob G109</description>
