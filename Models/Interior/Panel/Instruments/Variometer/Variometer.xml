@@ -19,11 +19,10 @@
  <animation> 
   <type>rotate</type>
   <object-name>Pointer</object-name>
-  <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+  <property>instrumentation/variometer/te-reading-mps</property>
   <interpolation>
-   <entry><ind>-1000</ind><dep>-135</dep></entry>
-   <entry><ind>0</ind><dep>0</dep></entry>
-   <entry><ind>1000</ind><dep>135</dep></entry>
+   <entry><ind>-10</ind><dep>-135</dep></entry>
+   <entry><ind>10</ind><dep>135</dep></entry>
   </interpolation>
   <axis> 
    <x>-1</x>

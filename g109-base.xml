@@ -78,6 +78,7 @@
       <file>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Transponder/Transponder.nas</file>
       <file>Aircraft/Grob-G109/Nasal/liveries.nas</file>
       <file>Aircraft/Grob-G109/Nasal/immat.nas</file>
+      <file>Aircraft/Grob-G109/Nasal/te-vario.nas</file>
     </g109>
   </nasal>
   
