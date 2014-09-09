@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Switches.ac</path>
+
+<animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>MainOn</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/main</property>
+    <value type="bool">true</value>
+   </binding>          
+  </action>
+ </animation>
+
+<animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>MainOff</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/main</property>
+    <value type="bool">false</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>MainSwitch</object-name>
+  <property>controls/switches/main</property>
+  <factor>30</factor>
+  <axis> 
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0.003</x-m>
+   <y-m>0</y-m>
+   <z-m>0.020</z-m>  
+  </center>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>FuelOn</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/fuel</property>
+    <value type="bool">true</value>
+   </binding>          
+  </action>
+ </animation>
+
+<animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>FuelOff</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/fuel</property>
+    <value type="bool">false</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>FuelSwitch</object-name>
+  <property>controls/switches/fuel</property>
+  <factor>30</factor>
+  <axis> 
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0.003</x-m>
+   <y-m>0</y-m>
+   <z-m>0.020</z-m>  
+  </center>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>NavOn</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/navlight</property>
+    <value type="bool">true</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>NavOff</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/navlight</property>
+    <value type="bool">false</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>NavSwitch</object-name>
+  <property>controls/switches/navlight</property>
+  <factor>30</factor>
+  <axis> 
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0.003</x-m>
+   <y-m>0</y-m>
+   <z-m>0.020</z-m>  
+  </center>
+ </animation>
+
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>StrobeOn</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/strobelight</property>
+    <value type="bool">true</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>StrobeOff</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/strobelight</property>
+    <value type="bool">false</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>StrobeSwitch</object-name>
+  <property>controls/switches/strobelight</property>
+  <factor>30</factor>
+  <axis> 
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0.003</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.020</z-m>  
+  </center>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>LandingOn</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/landinglight</property>
+    <value type="bool">true</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>LandingOff</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/landinglight</property>
+    <value type="bool">false</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>LandingSwitch</object-name>
+  <property>controls/switches/landinglight</property>
+  <factor>30</factor>
+  <axis> 
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0.003</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.020</z-m>  
+  </center>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>InstrOn</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/instrumentlight</property>
+    <value type="bool">true</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>InstrOff</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/instrumentlight</property>
+    <value type="bool">false</value>
+   </binding>          
+  </action>
+ </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>InstrSwitch</object-name>
+  <property>controls/switches/instrumentlight</property>
+  <factor>30</factor>
+  <axis> 
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0.003</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.020</z-m>  
+  </center>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>IgnitionUp</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>controls.stepMagnetos(1)</script>
+   </binding>
+   <mod-up>
+    <binding>
+     <command>nasal</command>
+     <script>controls.stepMagnetos(0)</script>
+    </binding>
+   </mod-up>                         
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <visible>false</visible>
+  <object-name>IgnitionDn</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>nasal</command>
+    <script>controls.stepMagnetos(-1)</script>
+   </binding>
+   <mod-up>
+    <binding>
+     <command>nasal</command>
+     <script>controls.stepMagnetos(0)</script>
+    </binding>
+   </mod-up>                         
+  </action>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Key</object-name>
+  <condition>
+  <greater-than>
+   <property>/controls/switches/ignition</property>
+   <value>0</value>
+  </greater-than>
+ </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>IgnitionSwitch</object-name>
+  <object-name>Key</object-name>
+  <property>/controls/switches/ignition</property>
+  <interpolation>
+   <entry><ind> 0</ind><dep> 0</dep></entry>
+   <entry><ind> 1</ind><dep> 0</dep></entry>
+   <entry><ind> 2</ind><dep> 50</dep></entry>
+   <entry><ind> 3</ind><dep> 100</dep></entry>
+   <entry><ind> 4</ind><dep> 150</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0.009</x-m>
+   <y-m>0.042472</y-m>
+   <z-m>-0.027703</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

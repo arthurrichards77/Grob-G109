@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AirSpeed -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/ASI/ASI.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.426 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Ai -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/AI/AI.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.316 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Crash Reset Switch -->
+  <model>
+
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Switches/CrashReset.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.371 </y-m>
+      <z-m> -0.005 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Altimeter -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Altimeter/Altimeter.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.206 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- gmeter -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/GMeter/GMeter.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.096 </y-m>
+      <z-m>  0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Turn -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Turn/Turn.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.426 </y-m>
+      <z-m> -0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Hdg -->
+  <model>
+
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Variometer2/Variometer2.xml</path>
+    <offsets>
+      <x-m>  0.175 </x-m>
+      <y-m> -0.316 </y-m>
+      <z-m> -0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Variometer -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Variometer/Variometer.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.206 </y-m>
+      <z-m> -0.055 </z-m>
+    </offsets>
+  </model>
+ 
+  <!-- Clock -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Clock/Clock.xml</path>
+    <offsets>
+      <x-m>  0.178 </x-m>
+      <y-m> -0.096 </y-m>
+      <z-m> -0.055 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Compass -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/MagneticCompass/MagneticCompass.xml</path>
+    <offsets>
+      <x-m> 0.410 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.375 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- Radios & Switches -->
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Radio/Radio.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.025 </y-m>
+      <z-m> 0.080 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Transponder/Transponder.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.025 </y-m>
+      <z-m> 0.020 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Switches/Switches.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.025 </y-m>
+      <z-m>-0.070 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/RPM/RPM.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.160 </y-m>
+      <z-m> -0.020 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right Hand ASI -->
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/ASI/ASI.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.270 </y-m>
+      <z-m> -0.020 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- Right Hand Slip -->
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Slip/Slip.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.360 </y-m>
+      <z-m> -0.020 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- OAT -->
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/OAT/OAT.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.450 </y-m>
+      <z-m> -0.020 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- Misc Gauges -->
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Gauges/Gauges.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.282 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Breakers -->
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Switches/Breakers.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.160 </y-m>
+      <z-m> -0.090 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/CODetector/CODetector.xml</path>
+    <offsets>
+      <x-m> 0.178 </x-m>
+      <y-m> 0.300 </y-m>
+      <z-m> -0.090 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+  <path>Aircraft/Grob-G109/Models/Interior/Panel/EnginePanel.xml</path>
+    <offsets>
+      <x-m> 0.17 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> -0.27 </z-m>
+    </offsets>
+  </model>
+
+
+
+  <animation>
+    <type>translate</type>
+    <object-name>PanelThrottle</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor>-0.10</factor>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+        <animation>
+                <type>rotate</type>
+                <object-name>TrimHandle</object-name>
+                <object-name>TrimLever</object-name>
+                <property>controls/flight/elevator-trim</property>
+                <factor>25</factor>
+                <center>
+                        <x-m>0.44</x-m>
+                        <y-m>-0.015</y-m>
+                        <z-m>-0.267194</z-m>
+                </center>
+                <axis>
+                        <x>0</x>
+                        <y>-0.2</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+        <animation>
+                <type>rotate</type>
+                <object-name>ThrottleHandle</object-name>
+                <object-name>ThrottleLever</object-name>
+                <property>controls/engines/engine[0]/throttle</property>
+                <factor>80</factor>
+                <center>
+                        <x-m>0.44</x-m>
+                        <y-m>-0.015</y-m>
+                        <z-m>-0.267194</z-m>
+                </center>
+                <axis>
+                        <x>0</x>
+                        <y>-0.2</y>
+                        <z>0</z>
+                </axis>
+        </animation>
+
+
+  
+</PropertyList>

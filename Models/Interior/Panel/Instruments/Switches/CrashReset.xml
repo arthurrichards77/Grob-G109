@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>CrashReset.ac</path>
+
+<animation> 
+  <type>translate</type>
+  <object-name>ResetSwitch</object-name>
+  <property>controls/switches/crashreset</property>
+  <factor>0.004</factor>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>                                          
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>ResetSwitch</object-name>
+  <action>
+   <button>0</button>
+   <repeatable>false</repeatable>
+   <binding>
+    <command>property-assign</command>
+    <property>controls/switches/crashreset</property>
+    <value type="int">1</value>
+   </binding>
+   <mod-up>
+     <binding>
+      <command>property-assign</command>
+      <property>controls/switches/crashreset</property>
+      <value type="int">0</value>
+     </binding>
+   </mod-up>                     
+  </action>
+ </animation>
+
+
+</PropertyList>

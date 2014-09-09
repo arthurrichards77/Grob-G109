@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Gauges.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>AmpsPtr</object-name>
+  <object-name>Case</object-name>
+  <object-name>CylTempPtr</object-name>
+  <object-name>FuelPtr</object-name>
+  <object-name>OilPressPtr</object-name>
+  <object-name>OilTempPtr</object-name>
+  <object-name>VoltsPtr</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.2</green>
+   <blue>0.0</blue>
+   <factor-prop>controls/lighting/instruments-norm</factor-prop>
+  </emission>
+ </animation>
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>FuelPtr</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <interpolation>
+   <entry><ind>   0.0</ind><dep> 0.0</dep></entry>
+   <entry><ind> 158.0</ind><dep>90.0</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.100</y-m>
+   <z-m>-0.005</z-m>  
+  </center>
+ </animation>         
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>CylTempPtr</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <interpolation>
+   <entry><ind>   0.0</ind><dep> 0.0</dep></entry>
+   <entry><ind> 158.0</ind><dep>90.0</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.060</y-m>
+   <z-m>-0.005</z-m>  
+  </center>
+ </animation>         
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>OilPressPtr</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <interpolation>
+   <entry><ind>   0.0</ind><dep> 0.0</dep></entry>
+   <entry><ind> 158.0</ind><dep>90.0</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.020</y-m>
+   <z-m>-0.005</z-m>  
+  </center>
+ </animation>         
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>OilTempPtr</object-name>
+  <property>consumables/fuel/tank[0]/level-lbs</property>
+  <interpolation>
+   <entry><ind>   0.0</ind><dep> 0.0</dep></entry>
+   <entry><ind> 158.0</ind><dep>90.0</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.020</y-m>
+   <z-m>-0.005</z-m>  
+  </center>
+ </animation>         
+
+ <animation> 
+  <type>rotate</type>
+  <object-name>VoltsPtr</object-name>
+  <property>systems/electrical/volts</property>
+  <interpolation>
+   <entry><ind>  0.0</ind><dep> 0.0</dep></entry>
+   <entry><ind> 40.0</ind><dep>90.0</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.060</y-m>
+   <z-m>-0.005</z-m>  
+  </center>
+ </animation>         
+
+ <animation>
+  <type>rotate</type>
+  <object-name>AmpsPtr</object-name>
+  <property>systems/electrical/amps</property>
+  <interpolation>  
+   <entry><ind>-40</ind><dep>-45</dep></entry>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>40</ind><dep>45</dep></entry>
+  </interpolation>
+  <axis> 
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.100</y-m>
+   <z-m>-0.005</z-m>  
+  </center>
+ </animation>     
+
+</PropertyList>
