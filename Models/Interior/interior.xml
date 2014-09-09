@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>siege1</object-name>
+    <object-name>siege2</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -0.623 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.087 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Pedals.xml</path>
+    <offsets>
+      <x-m> -0.85 </x-m>
+      <y-m>  0.265 </y-m>
+      <z-m> -0.51 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Pedals.xml</path>
+    <offsets>
+      <x-m> -0.85 </x-m>
+      <y-m> -0.265 </y-m>
+      <z-m> -0.51 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+   <name>Pitch</name>
+   <type>rotate</type>
+   <object-name>StickLeft</object-name>
+   <object-name>StickRight</object-name>
+   <property>controls/flight/elevator</property>
+   <factor>15</factor>
+   <center>
+    <x-m>-0.21</x-m>
+    <y-m>0.265</y-m>
+    <z-m>-0.38</z-m>
+   </center>
+   <axis>
+    <x>0</x>
+    <y>-1</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <name>RollLeft</name>
+   <type>rotate</type>
+   <object-name>StickLeft</object-name>
+   <property>controls/flight/aileron</property>
+   <factor>15</factor>
+   <center>
+    <x-m>-0.21</x-m>
+    <y-m>-0.265</y-m>
+    <z-m>-0.38</z-m>
+   </center>
+   <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation>
+   <name>RollRight</name>
+   <type>rotate</type>
+   <object-name>StickRight</object-name>
+   <property>controls/flight/aileron</property>
+   <factor>15</factor>
+   <center>
+    <x-m>-0.21</x-m>
+    <y-m>0.265</y-m>
+    <z-m>-0.38</z-m>
+   </center>
+   <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+  <animation> <type>translate</type>
+   <object-name>SpoilerHandleL</object-name>
+   <object-name>SpoilerHandleR</object-name>
+   <object-name>SpoilerShaftL</object-name>
+   <object-name>SpoilerShaftR</object-name>
+   <property>controls/flight/spoilers</property> 
+   <factor>0.2</factor>
+   <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+   </axis>
+  </animation>
+
+</PropertyList>
