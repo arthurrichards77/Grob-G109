@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>throttle.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>base</object-name>
+    <object-name>throttle</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>throttle</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -0.10 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
