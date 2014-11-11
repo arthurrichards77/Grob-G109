@@ -1,39 +1,48 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
- <path>Variometer.ac</path>
-
- <animation>
-  <type>material</type>
-  <object-name>Face</object-name>
-  <object-name>Pointer</object-name>   
-  <emission>
-   <red>1.0</red>
-   <green>0.2</green>
-   <blue>0.0</blue>
-   <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-  </emission>
- </animation>
-
- <animation> 
-  <type>rotate</type>
-  <object-name>Pointer</object-name>
-  <property>instrumentation/variometer/te-reading-mps</property>
-  <interpolation>
-   <entry><ind>-10</ind><dep>-135</dep></entry>
-   <entry><ind>10</ind><dep>135</dep></entry>
-  </interpolation>
-  <axis> 
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
-  <center>
-   <x-m>0</x-m>
-   <y-m>0</y-m>
-   <z-m>0</z-m>  
-  </center>
- </animation>         
- 
+  
+  <path>Variometer.ac</path>
+  
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>Face</object-name>
+    <object-name>Pointer</object-name>
+    
+    <object-name>vitre</object-name>
+  </animation>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Grob-G109/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>Pointer</object-name>   
+    <emission>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <red>   0.9 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+  
+  <animation> 
+    <type>rotate</type>
+    <object-name>Pointer</object-name>
+    <property>instrumentation/variometer/te-reading-mps</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -135 </dep></entry>
+      <entry><ind>  10 </ind><dep>  135 </dep></entry>
+    </interpolation>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>         
+  
 </PropertyList>

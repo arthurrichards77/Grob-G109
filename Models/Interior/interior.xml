@@ -1,113 +1,171 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>interior.ac</path>
-
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
-    <object-name>siege1</object-name>
-    <object-name>siege2</object-name>
+    <object-name>inttour</object-name>
+    <object-name>inttourporteG</object-name>
+    <object-name>inttourporteD</object-name>
 
     <!-- Objets transparents -->
+    <object-name>intverre</object-name>
+    <object-name>intverreporteG</object-name>
+    <object-name>intverreporteD</object-name>
   </animation>
-
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Grob-G109/Models/Effects/Glass/glass</inherits-from>
+    <object-name>intverre</object-name>
+    <object-name>intverreporteG</object-name>
+    <object-name>intverreporteD</object-name>
+  </effect>
+  
   <!-- Tableau de bord -->
   <model>
     <path>Aircraft/Grob-G109/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> -0.623 </x-m>
+      <x-m> -2.495 </x-m>
       <y-m>  0.000 </y-m>
-      <z-m>  0.087 </z-m>
+      <z-m> -0.008 </z-m>
     </offsets>
   </model>
-
+  
   <model>
-    <path>Aircraft/Grob-G109/Models/Interior/Pedals.xml</path>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Pedals/Pedals.xml</path>
     <offsets>
-      <x-m> -0.85 </x-m>
-      <y-m>  0.265 </y-m>
-      <z-m> -0.51 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Grob-G109/Models/Interior/Pedals.xml</path>
-    <offsets>
-      <x-m> -0.85 </x-m>
+      <x-m> -2.722 </x-m>
       <y-m> -0.265 </y-m>
-      <z-m> -0.51 </z-m>
+      <z-m> -0.605 </z-m>
     </offsets>
   </model>
-
+  
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Pedals/Pedals.xml</path>
+    <offsets>
+      <x-m> -2.722 </x-m>
+      <y-m>  0.265 </y-m>
+      <z-m> -0.605 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -2.057 </x-m>
+      <y-m> -0.257 </y-m>
+      <z-m> -0.292 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Left seat -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -2.082 </x-m>
+      <y-m> -0.265 </y-m>
+      <z-m> -0.438 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Right seat -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Seats/seat.xml</path>
+    <offsets>
+      <x-m> -2.082 </x-m>
+      <y-m>  0.265 </y-m>
+      <z-m> -0.438 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Spoiler handles -->
+  <model>
+    <path>Aircraft/Grob-G109/Models/Interior/Panel/Instruments/Spoiler/spoiler.xml</path>
+    <offsets>
+      <x-m> -2.272 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.325 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Canopy -->
   <animation>
-   <name>Pitch</name>
-   <type>rotate</type>
-   <object-name>StickLeft</object-name>
-   <object-name>StickRight</object-name>
-   <property>controls/flight/elevator</property>
-   <factor>15</factor>
-   <center>
-    <x-m>-0.21</x-m>
-    <y-m>0.265</y-m>
-    <z-m>-0.38</z-m>
-   </center>
-   <axis>
-    <x>0</x>
-    <y>-1</y>
-    <z>0</z>
-   </axis>
+    <name>IntPorteGauche</name>
+    <object-name>inttourporteG</object-name>
+    <object-name>intverreporteG</object-name>
   </animation>
-
+  
   <animation>
-   <name>RollLeft</name>
-   <type>rotate</type>
-   <object-name>StickLeft</object-name>
-   <property>controls/flight/aileron</property>
-   <factor>15</factor>
-   <center>
-    <x-m>-0.21</x-m>
-    <y-m>-0.265</y-m>
-    <z-m>-0.38</z-m>
-   </center>
-   <axis>
-    <x>-1</x>
-    <y>0</y>
-    <z>0</z>
-   </axis>
+    <type>pick</type>
+    <object-name>IntPorteGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
   </animation>
-
+  
   <animation>
-   <name>RollRight</name>
-   <type>rotate</type>
-   <object-name>StickRight</object-name>
-   <property>controls/flight/aileron</property>
-   <factor>15</factor>
-   <center>
-    <x-m>-0.21</x-m>
-    <y-m>0.265</y-m>
-    <z-m>-0.38</z-m>
-   </center>
-   <axis>
-    <x>-1</x>
-    <y>0</y>
-    <z>0</z>
-   </axis>
+    <type>rotate</type>
+    <object-name>IntPorteGauche</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m> -1.690 </x-m>
+      <y-m> -0.171 </y-m>
+      <z-m>  0.463 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
   </animation>
-
-  <animation> <type>translate</type>
-   <object-name>SpoilerHandleL</object-name>
-   <object-name>SpoilerHandleR</object-name>
-   <object-name>SpoilerShaftL</object-name>
-   <object-name>SpoilerShaftR</object-name>
-   <property>controls/flight/spoilers</property> 
-   <factor>0.2</factor>
-   <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-   </axis>
+  
+  <animation>
+    <name>IntPorteDroite</name>
+    <object-name>inttourporteD</object-name>
+    <object-name>intverreporteD</object-name>
   </animation>
-
+  
+  <animation>
+    <type>pick</type>
+    <object-name>IntPorteDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>IntPorteDroite</object-name>
+    <property>sim/model/door-positions/passenger/position-norm</property>
+    <factor> 90 </factor>
+    <center>
+      <x-m> -1.690 </x-m>
+      <y-m>  0.171 </y-m>
+      <z-m>  0.463 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
 </PropertyList>

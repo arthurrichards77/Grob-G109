@@ -1,7 +1,33 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
  <path>OAT.ac</path>
                                               
+ <animation>
+   <object-name>Case</object-name>
+   <object-name>bkg</object-name>
+   <object-name>Face</object-name>
+   
+   <object-name>vitre</object-name>
+ </animation>
+ 
+ <!-- working for Rembrandt -->
+ <effect>
+   <inherits-from>Aircraft/Grob-G109/Models/Effects/Glass/glass</inherits-from>
+   <object-name>vitre</object-name>
+ </effect>
+ 
+ <animation>
+   <type>material</type>
+   <object-name>bkg</object-name>
+   <object-name>Face</object-name>
+   <emission>
+     <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+     <red>   0.9 </red>
+     <green> 0.5 </green>
+     <blue>  0.2 </blue>
+   </emission>
+ </animation>
+ 
 </PropertyList>
