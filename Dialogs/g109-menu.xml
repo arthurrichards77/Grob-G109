@@ -1,11 +1,52 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <default>
     <menu n="10">
       <label>Grob G 109</label>
       <enabled type="bool">true</enabled>
+      <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/main</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/fuel</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/navlight</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/strobelight</property>
+        </binding>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/instrumentlight</property>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/switches/ignition</property>
+          <value>4</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>controls.startEngine(0,0)</script>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>gui.popupTip("Press 's' to start")</script>
+        </binding>
+      </item>
       <item>
         <label>Select Livery</label>
         <binding>
@@ -17,11 +58,10 @@
         <label>Immatriculation</label>
         <binding>
           <command>nasal</command>
-          <script>g109.immat_dialog.toggle()</script>
+          <script>immat.immat_dialog.toggle()</script>
         </binding>
       </item>
     </menu>
   </default>
-
+  
 </PropertyList>
-

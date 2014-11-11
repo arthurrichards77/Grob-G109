@@ -1,218 +1,251 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
- <path>Transponder.ac</path>
-
- <animation>
-  <type>pick</type>
-  <object-name>Ident</object-name>
-  <visible>true</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-assign</command>
-      <property>/instrumentation/transponder/ident</property>
-      <value>true</value>
-    </binding>
-    <mod-up>
-     <binding>
-       <command>property-assign</command>
-       <property>/instrumentation/transponder/ident</property>
-       <value>false</value>
-     </binding>
-    </mod-up>
-  </action>
- </animation>
-
- <animation>
-  <type>pick</type>
-  <object-name>MSUp</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-     <command>nasal</command>
-     <script>g109.stepmsb(1)</script>
-    </binding>
-  </action>
- </animation>
-
-
- <animation>
-  <type>pick</type>
-  <object-name>MSDn</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-     <command>nasal</command>
-     <script>g109.stepmsb(-1)</script>
-    </binding>
-  </action>
- </animation>
-
- <animation>
-  <type>pick</type>
-  <object-name>LSUp</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-     <command>nasal</command>
-     <script>g109.steplsb(1)</script>
-    </binding>
-  </action>
- </animation>
-
- <animation>
-  <type>pick</type>
-  <object-name>LSDn</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-     <command>nasal</command>
-     <script>g109.steplsb(-1)</script>
-    </binding>
-  </action>
- </animation>
-
- <animation>
-  <type>pick</type>
-  <object-name>ModeUp</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>/instrumentation/transponder/mode</property>
-      <step>1</step>
-      <min>0</min>
-      <max>4</max>
-      <wrap>false</wrap>
-    </binding>
-  </action>
- </animation>
-
- <animation>
-  <type>pick</type>
-  <object-name>ModeDn</object-name>
-  <visible>false</visible>
-  <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
-    <binding>
-      <command>property-adjust</command>
-      <property>/instrumentation/transponder/mode</property>
-      <step>-1</step>
-      <min>0</min>
-      <max>4</max>
-      <wrap>false</wrap>
-    </binding>
-  </action>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Mode</object-name>
-  <property>instrumentation/transponder/mode</property>
-  <factor>60</factor>
-  <axis> 
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
-  <center>
-   <x-m>0</x-m>
-   <y-m>0</y-m>
-   <z-m>-0.0117</z-m>  
-  </center>                        
- </animation>
-
- <animation>
-  <object-name>Reply</object-name>
-  <type>material</type>
-  <emission>
-   <red>0.9</red>
-   <green>0.1</green>
-   <blue>0.0</blue>
-   <factor-prop>instrumentation/transponder/reply-norm</factor-prop>
-  </emission>
- </animation>                  
-
- <animation>
-  <type>rotate</type>
-  <object-name>Digit1000</object-name>
-  <property>instrumentation/transponder/digit1</property>
-  <factor>45</factor>
-  <axis> 
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
-  </axis>
-  <center>
-   <x-m>-0.008</x-m>
-   <y-m>0</y-m>
-   <z-m>0.005</z-m>  
-  </center>                        
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Digit100</object-name>
-  <property>instrumentation/transponder/digit2</property>
-  <factor>45</factor>
-  <axis> 
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
-  </axis>
-  <center>
-   <x-m>-0.008</x-m>
-   <y-m>0</y-m>
-   <z-m>0.005</z-m>  
-  </center>                        
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Digit10</object-name>
-  <property>instrumentation/transponder/digit3</property>
-  <factor>45</factor>
-  <axis> 
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
-  </axis>
-  <center>
-   <x-m>-0.008</x-m>
-   <y-m>0</y-m>
-   <z-m>0.005</z-m>  
-  </center>                        
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>Digit1</object-name>
-  <property>instrumentation/transponder/digit4</property>
-  <factor>45</factor>
-  <axis> 
-   <x>0</x>
-   <y>-1</y>
-   <z>0</z>
-  </axis>
-  <center>
-   <x-m>-0.008</x-m>
-   <y-m>0</y-m>
-   <z-m>0.005</z-m>  
-  </center>                        
- </animation>
-
+  
+  <path>Transponder.ac</path>
+  
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>MSDigits</object-name>
+    <object-name>Mode</object-name>
+    <object-name>LSDigits</object-name>
+    <object-name>Reply</object-name>
+    <object-name>Ident</object-name>
+    <object-name>Digit1000</object-name>
+    <object-name>Digit100</object-name>
+    <object-name>Digit10</object-name>
+    <object-name>Digit1</object-name>
+    
+    <object-name>MSDn</object-name>
+    <object-name>MSUp</object-name>
+    <object-name>ModeDn</object-name>
+    <object-name>ModeUp</object-name>
+    <object-name>LSDn</object-name>
+    <object-name>LSUp</object-name>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Digit1000</object-name>
+    <object-name>Digit100</object-name>
+    <object-name>Digit10</object-name>
+    <object-name>Digit1</object-name>
+    <emission>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <red>   0.9 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Reply</object-name>
+    <emission>
+      <factor-prop>instrumentation/transponder/reply-norm</factor-prop>
+      <red>   2 </red>
+      <green> 1 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>                  
+  
+  <animation>
+    <type>pick</type>
+    <object-name>Ident</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>/instrumentation/transponder/ident</property>
+        <value>true</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/instrumentation/transponder/ident</property>
+          <value>false</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>MSUp</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>g109.stepmsb(1)</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>MSDn</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>g109.stepmsb(-1)</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>LSUp</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>g109.steplsb(1)</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>LSDn</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>g109.steplsb(-1)</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>ModeUp</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/transponder/mode</property>
+        <step>1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>ModeDn</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/transponder/mode</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Mode</object-name>
+    <property>instrumentation/transponder/mode</property>
+    <factor> 60 </factor>
+    <center>
+      <x-m>  0.0000 </x-m>
+      <y-m>  0.0000 </y-m>
+      <z-m> -0.0117 </z-m>  
+    </center>                        
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Digit1000</object-name>
+    <property>instrumentation/transponder/digit1</property>
+    <factor> 45 </factor>
+    <center>
+      <x-m> -0.008 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.005 </z-m>  
+    </center>                        
+    <axis> 
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Digit100</object-name>
+    <property>instrumentation/transponder/digit2</property>
+    <factor> 45 </factor>
+    <center>
+      <x-m> -0.008 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.005 </z-m>  
+    </center>                        
+    <axis> 
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Digit10</object-name>
+    <property>instrumentation/transponder/digit3</property>
+    <factor> 45 </factor>
+    <center>
+      <x-m> -0.008 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.005 </z-m>  
+    </center>                        
+    <axis> 
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Digit1</object-name>
+    <property>instrumentation/transponder/digit4</property>
+    <factor> 45 </factor>
+    <center>
+      <x-m> -0.008 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.005 </z-m>  
+    </center>                        
+    <axis> 
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
 </PropertyList>

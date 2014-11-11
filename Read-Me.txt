@@ -29,11 +29,14 @@ k/j : Spoilers
 Thanks
 ======
 
+Instrumentation and liverie : Jon STOCKILL
+
 ===============
 BARANGER Emmanuel
 May, 11, 2008. 
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr
 
 
@@ -67,9 +70,12 @@ k/j : Spoilers
 Remerciements
 =============
 
+Instrumentation et livrée : Jon STOCKILL
+
 ===============
 BARANGER Emmanuel
 11 Mai 2008.
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr

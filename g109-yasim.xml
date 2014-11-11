@@ -1,150 +1,163 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!-- Grob G 109B (Vigilant T Mk1)
-     3D model by Emmanuel BARANGER
-     FDM by Emmanuel BARANGER and Jon Stockill
+                        3D model by Emmanuel BARANGER (11 / 2008)
+                        FDM by Emmanuel BARANGER and Jon Stockill
+              Updated : Emmanuel BARANGER             (11 / 2014)
+
+     sources          : http://en.wikipedia.org/wiki/Grob_G_109
+
+     wingspan         :  17.40 m   ( 57.09 ft )
+     length           :   8.10 m   ( 26.57 ft )
+     height           :   1.70 m   (  5.58 ft )
+     empty weight     :    620 kg  (  1364 lb )
+     engine           : 1 x Grob 2500E1 4-cylinder air-cooled piston engine ( 95 hp )
+     Maximu speed     :  241 km/h  (   130 kt )
 -->
-
-<airplane mass="1320">
-
-<!-- Pilot, copilot, baggage -->
-<weight
-  x="2.03" y="-.27" z="-0.25" 
-  mass-prop="/sim/weight[0]/weight-lb"/>
-<weight 
-  x="2.03" y=".27" z="-0.25" 
-  mass-prop="/sim/weight[1]/weight-lb"/>
-<weight 
-  x="1.11" y="0" z="-0.3" 
-  mass-prop="/sim/weight[2]/weight-lb"/>                
-
+<airplane mass="1364" version="YASIM_VERSION_CURRENT">
+  
   <!-- Approach configuration -->
-  <approach speed="55" aoa="14" fuel="0.2">
+  <approach speed="55" aoa="4" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture"  value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture"  value="1"/>
     <solve-weight idx="0" weight="150"/>
     <solve-weight idx="1" weight="150"/>
     <solve-weight idx="2" weight="0"/>
   </approach>
-
+  
   <!-- Cruise configuration -->
   <cruise speed="117" alt="5000" fuel="0.5">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.6"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture"  value="0.6"/>
     <solve-weight idx="0" weight="150"/>
     <solve-weight idx="1" weight="150"/>
     <solve-weight idx="2" weight="0"/>
   </cruise>
-
-  <cockpit x="1.818" y="-0.264" z="0.256"/>
-
-  <fuselage ax="4.045" ay="0" az="-0.209" bx="-3.561" by="0" bz="-0.252"  width="1.214"  taper="0.2"  midpoint="1"/>
-
+  
+  <cockpit x="1.818" y="0.264" z="0.256"/>
+  
+  <fuselage ax="3.70982" ay="0" az="-0.20900" bx=" 1.78937" by="0" bz="-0.11676" width="1.214"  taper="0.2"  midpoint="1"/>
+  <fuselage ax="1.78937" ay="0" az="-0.11676" bx="-3.56100" by="0" bz="-0.25200" width="1.214"  taper="0.2"  midpoint="0"/>
+  
   <wing x="1.163" y="0.584" z="-0.402" 
-        taper="0.44" 
-        length="8.053"
         chord="1.888" 
-        sweep="-2.5" 
-        dihedral="3.0" 
-        camber="0.15">
-        <stall aoa="20" width="1.0" peak="1.5"/>
-        <spoiler start="0.220" end="0.398" lift="0" drag="2.5"/>
-        <flap1 start="0.486" end="0.973" lift="1.4" drag="1.1"/>
-
-        <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
-        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
-        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
-
+        length="8.053"
+        taper="0.44" 
+        sweep="-4" 
+        dihedral="3" 
+        camber="0.02">
+        <stall aoa="18" width="1" peak="1.5"/>
+        <spoiler start="0.22" end="0.398" lift="0.8" drag="6"/>
+        <flap1 start="0.486" end="0.973" lift="1.2" drag="1.1"/>
+    
+        <control-input control="SPOILER" axis="/controls/flight/spoilers"/>
+        <control-input control="FLAP1" axis="/controls/flight/aileron" split="true"/>
+        <control-input control="FLAP1" axis="/controls/flight/aileron-trim" split="true"/>
+    
         <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>  
         <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
         <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
   </wing>
-
-<hstab x="-3.424" y="0.0" z="1.193" 
-       taper="0.56" 
-       length="1.635" 
-       chord="1.138" 
-       sweep="0.0">
-       <stall aoa="20" width="4" peak="1.5"/>
-       <flap0 start="0" end="1" lift="1.9" drag="1.1" effectiveness="2.0"/>
-
-       <control-input axis="/controls/flight/elevator" control="FLAP0"/>
-       <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
-
-       <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
-</hstab>
-
+  
+  <hstab x="-3.424" y="0.0" z="1.193" 
+         taper="0.56" 
+         length="1.635" 
+         chord="1.138" 
+         sweep="2">
+         <stall aoa="14" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.5" drag="1"/>
+    
+         <control-input control="FLAP0" axis="/controls/flight/elevator"/>
+         <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/>
+    
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+  
   <vstab x="-2.749" y="0" z="-0.277" 
          taper="0.63" 
          length="1.611" 
          chord="1.517"
-         sweep="20.0">
-         <stall aoa="14" width="3" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
-
-         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
-         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
-
+         sweep="30">
+         <stall aoa="14" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.75" drag="1.35"/>
+    
+         <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
+         <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
+    
          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
+  
+  <!-- Engines   source            : 
 
-  <!-- engine   : Grob 2500 - 95 hp - 3400 rpm
-       propeller: HO-V 62 R/L 160 BT 
-  =================================================================================
+                 name              : GROB 2500 E1
+                 type              : 
+                 power cruise      : 95 hp at 3000 rpm
+                 weight            : 
+                 displacement      : 
+                 compression       : 
+                 propeller         : Hoffmann HO-V62 R/L 160 BT 
   -->
   <propeller x="3.246" y="0.0" z="-0.245" 
-	     mass="325" 
-	     moment="2.25"
-	     radius="0.80"
-	     cruise-speed="117"
-	     cruise-rpm="3000"
-	     cruise-alt="5000" 
-	     cruise-power="87"
-	     takeoff-power="95" 
-	     takeoff-rpm="3400">
+             mass="325" 
+             moment="2.25"
+             radius="0.85"
+             cruise-power="87"
+             cruise-speed="117"
+             cruise-rpm="3000"
+             cruise-alt="5000" 
+             takeoff-power="95" 
+             takeoff-rpm="3400">
+             <actionpt x="3.842" y="0.0" z="-0.209"/>
              <piston-engine eng-rpm="3400" 
-	                    eng-power="95"
-	                    displacement="152" 
-	                    compression="8.5"/>
-             <actionpt x="3.842" y="0.0" z="-0.209" />
-            
-            <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle" />
-            <control-input control="STARTER" axis="/controls/engines/engine[0]/starter" />
-            <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos" />
-            <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture" />
+                            eng-power="95"
+                            displacement="152" 
+                            compression="8.5">
+                            <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+                            <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+                            <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+                            <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/>
+             </piston-engine>
   </propeller>
   
   <!-- Left wheel -->
   <gear x="1.870" y="0.900" z="-1.295"  
-        compression=".15" 
-        spring=".8" 
-        on-solid="1" >
-        <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+        compression="0.2" 
+        spring="1.8" 
+        damp="0.03" 
+        on-solid="1">
+        <control-input control="BRAKE" axis="/controls/gear/brake-left" split="true"/>
+        <control-input control="BRAKE" axis="/controls/gear/brake-parking" split="true"/>
   </gear>
-
+  
   <!-- Right wheel -->
   <gear x="1.870" y="-0.900" z="-1.295" 
-        compression=".15" 
-        spring=".8"
-        on-solid="1" >
-        <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+        compression="0.2" 
+        spring="1.8" 
+        damp="0.03" 
+        on-solid="1">
+        <control-input control="BRAKE" axis="/controls/gear/brake-right" split="true"/>
+        <control-input control="BRAKE" axis="/controls/gear/brake-parking" split="true"/>
   </gear>
-
+  
   <!-- Tail wheel -->
   <gear x="-2.814" y="0" z="-0.673" 
-        compression=".2" 
-        spring=".8"
+        compression="0.15" 
+        spring="0.8"
         on-solid="1"
         sfric="1"
         dfric="1">
-        <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0=".25" dst1="-.25"/>
+        <control-input control="STEER" axis="/controls/flight/rudder" src0="-1.0" src1="1.0" dst0=".25" dst1="-.25"/>
   </gear>
-
+  
   <!-- Fuel 100 litres -->
-  <tank x="1.07" y="0" z="-0.35" capacity="158" />
-
-  <!-- CG théorique x=1.163 y=0 z=-0.402  -->
-  <ballast x="2.8" y="0.000" z="-0.308" mass="350"/>
-
+  <tank x="1.07" y="0" z="-0.35" capacity="158"/>
+  
+  <!-- Pilot, copilot, baggage -->
+  <weight x="2.03" y="-0.27" z="-0.25" mass-prop="/sim/weight[0]/weight-lb"/>
+  <weight x="2.03" y=" 0.27" z="-0.25" mass-prop="/sim/weight[1]/weight-lb"/>
+  <weight x="1.11" y=" 0.00" z="-0.30" mass-prop="/sim/weight[2]/weight-lb"/>                
+ 
+  <!-- Mass displacement -->
+  <ballast x="-3" y="0" z="-0.3" mass="200"/>
+  
 </airplane>
