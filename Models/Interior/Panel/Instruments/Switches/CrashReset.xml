@@ -1,42 +1,61 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
- <path>CrashReset.ac</path>
-
-<animation> 
-  <type>translate</type>
-  <object-name>ResetSwitch</object-name>
-  <property>controls/switches/crashreset</property>
-  <factor>0.004</factor>
-  <axis> 
-   <x>-1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>                                          
-
-<animation>
-  <type>pick</type>
-  <visible>true</visible>
-  <object-name>ResetSwitch</object-name>
-  <action>
-   <button>0</button>
-   <repeatable>false</repeatable>
-   <binding>
-    <command>property-assign</command>
+  
+  <path>CrashReset.ac</path>
+  
+  <animation>
+    <object-name>ResetPanel</object-name>
+    <object-name>ResetHousing</object-name>
+    <object-name>ResetSwitch</object-name>
+    
+  </animation>
+  
+  <animation>
+    <type>material</type>
+    <object-name>ResetPanel</object-name>
+    <object-name>ResetHousing</object-name>
+    <object-name>ResetSwitch</object-name>
+    <emission>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <red>   0.9 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+  
+  <animation> 
+    <type>translate</type>
+    <object-name>ResetSwitch</object-name>
     <property>controls/switches/crashreset</property>
-    <value type="int">1</value>
-   </binding>
-   <mod-up>
-     <binding>
-      <command>property-assign</command>
-      <property>controls/switches/crashreset</property>
-      <value type="int">0</value>
-     </binding>
-   </mod-up>                     
-  </action>
- </animation>
-
-
+    <factor> 0.004 </factor>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>                                          
+  
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ResetSwitch</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/crashreset</property>
+        <value type="int">1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/switches/crashreset</property>
+          <value type="int">0</value>
+        </binding>
+      </mod-up>                     
+    </action>
+  </animation>
+  
 </PropertyList>

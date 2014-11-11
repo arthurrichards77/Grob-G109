@@ -64,7 +64,6 @@ BatteryClass.new = func {
     return obj;
 }
 
-
 BatteryClass.apply_load = func( amps, dt ) {
     amphrs_used = amps * dt / 3600.0;
     percent_used = amphrs_used / me.amp_hours;
@@ -78,7 +77,6 @@ BatteryClass.apply_load = func( amps, dt ) {
     return me.amp_hours * me.charge_percent;
 }
 
-
 BatteryClass.get_output_volts = func {
     x = 1.0 - me.charge_percent;
     tmp = -(3.0 * x - 1.0);
@@ -86,14 +84,12 @@ BatteryClass.get_output_volts = func {
     return me.ideal_volts * factor;
 }
 
-
 BatteryClass.get_output_amps = func {
     x = 1.0 - me.charge_percent;
     tmp = -(3.0 * x - 1.0);
     factor = (tmp*tmp*tmp*tmp*tmp + 32) / 32;
     return me.ideal_amps * factor;
 }
-
 
 AlternatorClass = {};
 
@@ -106,7 +102,6 @@ AlternatorClass.new = func {
     setprop( obj.rpm_source, 0.0 );
     return obj;
 }
-
 
 AlternatorClass.apply_load = func( amps, dt ) {
     # Scale alternator output for rpms < 600.  For rpms >= 600
@@ -122,7 +117,6 @@ AlternatorClass.apply_load = func( amps, dt ) {
     return available_amps - amps;
 }
 
-
 AlternatorClass.get_output_volts = func {
     # scale alternator output for rpms < 600.  For rpms >= 600
     # give full output.  This is just a WAG, and probably not how
@@ -135,7 +129,6 @@ AlternatorClass.get_output_volts = func {
     # print( "alternator volts = ", me.ideal_volts * factor );
     return me.ideal_volts * factor;
 }
-
 
 AlternatorClass.get_output_amps = func {
     # scale alternator output for rpms < 600.  For rpms >= 600
@@ -150,7 +143,6 @@ AlternatorClass.get_output_amps = func {
     return me.ideal_amps * factor;
 }
 
-
 update_electrical = func {
     time = getprop("/sim/time/elapsed-sec");
     dt = time - last_time;
@@ -160,7 +152,6 @@ update_electrical = func {
     # Request that the update fuction be called again next frame
     settimer(update_electrical, 0);
 }
-
 
 update_virtual_bus = func( dt ) {
     battery_volts = battery.get_output_volts();
@@ -188,26 +179,25 @@ update_virtual_bus = func( dt ) {
         power_source = "external";
     }
 
-
     # starter
     if (getprop("/controls/switches/ignition")==4) {
-	load += 20.0;
+      load += 20.0;
     }
 
     # Starter warning
     if (getprop("controls/engines/engine/starter")) {
-	 setprop("instrumentation/warning-panel/starter-norm",  bus_volts/28);
+      setprop("instrumentation/warning-panel/starter-norm",  bus_volts/28);
     }
     else {
-	 setprop("instrumentation/warning-panel/starter-norm",  0.0);
+      setprop("instrumentation/warning-panel/starter-norm",  0.0);
     };
 
     # Generator warning
     if (bus_volts<25) {
-	 setprop("instrumentation/warning-panel/generator-norm",  bus_volts/28);
+      setprop("instrumentation/warning-panel/generator-norm",  bus_volts/28);
     }
     else {
-	 setprop("instrumentation/warning-panel/generator-norm",  0.0);
+      setprop("instrumentation/warning-panel/generator-norm",  0.0);
     };
 
     # bus network (1. these must be called in the right order, 2. the
@@ -251,16 +241,15 @@ update_virtual_bus = func( dt ) {
     return load;
 }
 
-
 main_bus = func() {
 
     # fed from the "virtual" bus via the main bus breaker (30A)
     if ( getprop("/controls/circuit-breakers/main") and
          getprop("/controls/switches/main") ) {
-    	main_bus_volts = vbus_volts;
+      main_bus_volts = vbus_volts;
     } else {
-	main_bus_volts = 0.0;
-    }	
+  main_bus_volts = 0.0;
+    } 
     setprop("/systems/electrical/mainbusvolts",main_bus_volts);
     load = 0.0;
 
@@ -280,61 +269,60 @@ main_bus = func() {
 
     # Landing Light (7.5A)
     if ( getprop("/controls/switches/landinglight") ) {
-         setprop("/systems/electrical/outputs/land-light", main_bus_volts);
-	 setprop("/controls/lighting/land-light-norm",  main_bus_volts/28);
-         load += 3.5;
+      setprop("/systems/electrical/outputs/land-light", main_bus_volts);
+      setprop("/controls/lighting/land-light-norm",  main_bus_volts/28);
+      load += 3.5;
     } else {
-        setprop("/systems/electrical/outputs/land-light", 0.0);
-	 setprop("/controls/lighting/land-light-norm", 0.0);
+      setprop("/systems/electrical/outputs/land-light", 0.0);
+      setprop("/controls/lighting/land-light-norm", 0.0);
     }
 
     # Nav Lights (7.5A)
     if ( getprop("/controls/switches/navlight") ) {
-         setprop("/systems/electrical/outputs/nav-lights", main_bus_volts);
-	 setprop("/controls/lighting/nav-lights-norm",  main_bus_volts/28);
-         load += 4.0;
+      setprop("/systems/electrical/outputs/nav-lights", main_bus_volts);
+      setprop("/controls/lighting/nav-lights-norm",  main_bus_volts/28);
+      load += 4.0;
     } else {
-        setprop("/systems/electrical/outputs/nav-lights", 0.0);
-	setprop("/controls/lighting/nav-lights-norm", 0.0);
+      setprop("/systems/electrical/outputs/nav-lights", 0.0);
+      setprop("/controls/lighting/nav-lights-norm", 0.0);
     }
     
     # Instrument Lights (5A)
     if ( getprop("/controls/switches/instrumentlight") ) {
-        setprop("/systems/electrical/outputs/instr-lights", main_bus_volts);
-        setprop("/controls/lighting/instruments-norm",  main_bus_volts/28);
-	load += 3.0;
+      setprop("/systems/electrical/outputs/instr-lights", main_bus_volts);
+      setprop("/controls/lighting/instruments-norm",  main_bus_volts/28);
+      load += 3.0;
     } else {
-        setprop("/systems/electrical/outputs/instr-lights", 0.0);
-	setprop("/controls/lighting/instruments-norm", 0.0);
+      setprop("/systems/electrical/outputs/instr-lights", 0.0);
+      setprop("/controls/lighting/instruments-norm", 0.0);
     }
 
     # Fuel Pump (5A)
     if ( getprop("/controls/switches/fuel") ) {
-        setprop("/systems/electrical/outputs/fuel-pump", main_bus_volts);
-	load += 3.0;
+      setprop("/systems/electrical/outputs/fuel-pump", main_bus_volts);
+      load += 3.0;
     } else {
-        setprop("/systems/electrical/outputs/fuel-pump", 0.0);
+      setprop("/systems/electrical/outputs/fuel-pump", 0.0);
     }
 
     if ( getprop("systems/electrical/outputs/fuel-pump")>12 ) {
-        setprop("controls/engines/engine/fuel-pump", 1);
+      setprop("controls/engines/engine/fuel-pump", 1);
     } else {
-        setprop("controls/engines/engine/fuel-pump", 0);
+      setprop("controls/engines/engine/fuel-pump", 0);
     }
-
 
     setprop("/systems/electrical/outputs/turn-coordinator", main_bus_volts);
 
     # pop breaker if over current
-    if ( load>30.0 and main_bus_volts>1.0 ) {
-	setprop("/controls/circuit-breakers/main",0);
-    }
+    #if ( load>30.0 and main_bus_volts>1.0 ) {
+    #  setprop("/controls/circuit-breakers/main",0);
+    #}
 
     # return cumulative load
     if ( main_bus_volts>1.0 ) { 
-	return load;
+      return load;
     } else {
-	return 0.0;
+      return 0.0;
     }
 }
 

@@ -1,36 +1,50 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
- <path>MagneticCompass.ac</path>
-
- <animation>
-  <type>material</type>
-  <object-name>Ball</object-name>
-  <emission>
-   <red>1.0</red>
-   <green>0.2</green>
-   <blue>0.0</blue>
-   <factor-prop>/controls/lighting/instruments-norm</factor-prop>
-  </emission>
- </animation>
-
-
- <animation>
-  <type>rotate</type>
-  <object-name>Ball</object-name>
-
-  <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
-  <center>
-   <x-m>-0.022</x-m>
-   <y-m>0.00</y-m>
-   <z-m>0</z-m>
-  </center> 
-  <axis>
-   <x>0.0</x>
-   <y>0.0</y>
-   <z>1.0</z>
-  </axis>
- </animation>
-
+  
+  <path>MagneticCompass.ac</path>
+  
+  <animation>
+    <object-name>Case</object-name>
+    <object-name>Bracket</object-name>
+    <object-name>Marker</object-name>
+    <object-name>Ball</object-name>
+    
+    <object-name>vitre</object-name>
+  </animation>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Grob-G109/Models/Effects/Glass/glass</inherits-from>
+    <object-name>vitre</object-name>
+  </effect>
+  
+  <animation>
+    <type>material</type>
+    <object-name>Ball</object-name>
+    <object-name>Marker</object-name>
+    <emission>
+      <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+      <red>   0.9 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Ball</object-name>
+    <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+    <center>
+      <x-m> -0.022 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </center> 
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
 </PropertyList>
