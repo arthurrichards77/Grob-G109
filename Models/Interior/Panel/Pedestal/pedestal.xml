@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>pedestal.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>pedestal</object-name>
+    <object-name>TrimLever</object-name>
+    <object-name>ThrottleLever</object-name>
+    <object-name>FuelCock</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>TrimLever</object-name>
+    <property>controls/flight/elevator-trim</property>
+    <factor> 25 </factor>
+    <center>
+      <x-m>  0.440000 </x-m>
+      <y-m> -0.015000 </y-m>
+      <z-m> -0.267194 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y>-0.2 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>ThrottleLever</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m>  0.440000 </x-m>
+      <y-m> -0.015000 </y-m>
+      <z-m> -0.267194 </z-m>
+    </center>
+    <axis>
+      <x>  0.0 </x>
+      <y> -0.2 </y>
+      <z>  0.0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

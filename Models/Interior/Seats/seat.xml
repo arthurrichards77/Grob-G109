@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>seat.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>seat</object-name>
+    <object-name>stick</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>stick</object-name>
+    <property>controls/flight/elevator</property>
+    <factor> 15 </factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>stick</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> 15 </factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
