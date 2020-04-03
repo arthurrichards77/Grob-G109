@@ -17,8 +17,8 @@
    <prop>/controls/flight/aileron</prop>
   </output>
   <config>
-   <Kp>0.01</Kp>
-   <Ti>20.0</Ti>
+   <Kp>0.05</Kp>
+   <Ti>10.0</Ti>
    <Td>0.0</Td>
    <u_min>-1.0</u_min>
    <u_max>1.0</u_max>
@@ -40,8 +40,8 @@
    <prop>/controls/flight/aileron</prop>
   </output>
   <config>
-   <Kp>0.01</Kp>
-   <Ti>20.0</Ti>
+   <Kp>0.05</Kp>
+   <Ti>10.0</Ti>
    <Td>0.0</Td>
    <u_min>-1.0</u_min>
    <u_max>1.0</u_max>
@@ -49,7 +49,7 @@
  </pid-controller>
 
  <pid-controller>
-  <name>Loiter</name>
+  <name>Loiter Anticlockwise</name>
   <debug>false</debug>
   <enable>
    <prop>/autopilot/locks/heading</prop>
@@ -63,11 +63,11 @@
    <prop>/autopilot/internal/target-roll-deg</prop>
   </output>
   <config>
-   <Kp>5.0</Kp>
-   <Ti>2000.0</Ti>
-   <Td>0.0</Td>
-   <u_min>-15.0</u_min>
-   <u_max>15.0</u_max>
+   <Kp>20.0</Kp>
+   <Ti>100.0</Ti>
+   <Td>20.0</Td>
+   <u_min>-10.0</u_min>
+   <u_max>5.0</u_max>
   </config>
  </pid-controller>
 
